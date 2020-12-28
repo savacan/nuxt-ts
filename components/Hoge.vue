@@ -30,8 +30,8 @@ export default defineComponent<Props>({
       type: String,
     },
     content: {
-      type: String
-    }
+      type: String,
+    },
   },
   setup(props: Props) {
     const data = reactive<Data>({ count: 0 })
