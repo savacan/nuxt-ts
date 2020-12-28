@@ -6,6 +6,9 @@
       <button type="button" @click="onIncrement">increment</button>
       <button type="button" @click="onDecrement">decrement</button>
     </div>
+    <div>
+      <p>{{ content }}</p>
+    </div>
   </div>
 </template>
 
@@ -14,6 +17,7 @@ import { defineComponent, reactive } from '@vue/composition-api'
 
 type Props = {
   title: string
+  content: string
 }
 
 type Data = {
@@ -25,6 +29,9 @@ export default defineComponent<Props>({
     title: {
       type: String,
     },
+    content: {
+      type: String
+    }
   },
   setup(props: Props) {
     const data = reactive<Data>({ count: 0 })
