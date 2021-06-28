@@ -2,6 +2,7 @@
   <div class="container">
     <div>
       <Logo />
+      <hoge-vue title="increment test" content="hogeeeee" />
       <h1 class="title">nuxt-ts</h1>
       <div class="links">
         <a
@@ -27,8 +28,11 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import HogeVue from '~/components/Hoge.vue'
 
-export default Vue.extend({})
+export default Vue.extend({
+  components: { 'hoge-vue': HogeVue },
+})
 </script>
 
 <style>
